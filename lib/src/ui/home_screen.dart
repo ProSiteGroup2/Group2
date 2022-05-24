@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Categories",
+                        "Categorie",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontFamily: "poppins",
