@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -38,114 +36,154 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         
           child: Column(children: [
             
-        Container(
-            margin: const EdgeInsets.only(left: 10, top: 10, right: 200, bottom: 10),
-            child: Text(
-              "Find your\nNeed",
-              style: TextStyle(
-                  fontFamily: "poppins",
-                  fontSize: 33,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                  height: 1.15),
-            )),
-        Container(
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: TabBar(
-              labelPadding: const EdgeInsets.only(left: 45, right: 40),
-              controller: _tabController,
-              labelColor: Colors.black,
-              labelStyle: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "poppins"),
-              unselectedLabelColor: Colors.grey,
-              isScrollable: true,
-              indicatorSize: TabBarIndicatorSize.label,
-              tabs: [Tab(text: "Hardware Items"), Tab(text: "Workers")],
-            ),
-          ),
-        ),
-        Row(children: [
-          TextField(),
-          IconButton(
-              onPressed: () {
-                // showSearch(
-                //   context: context,
-                //   delegate: CustomSearchDelegate(),
-                // );
-              },
-              icon: Icon(Icons.search))
-        ]),
-        Container(
-          height: 100,
-          width: double.maxFinite,
-          child: TabBarView(
-            controller: _tabController,
-            children: [
               Container(
-                margin: EdgeInsets.only(left: 30, top: 2),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Most Popular Items",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontFamily: "poppins",
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            height: 1.15),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(right: 30),
-                        child: Text(
-                          "See all",
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                              fontFamily: "poppins",
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey,
-                              height: 1),
-                        ),
-                      ),
-                    ]),
+                  margin: const EdgeInsets.only(left: 10, top: 10, right: 200, bottom: 10),
+                  child: Text(
+                    "Find your\nNeed",
+                    style: TextStyle(
+                        fontFamily: "poppins",
+                        fontSize: 33,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
+                        height: 1.15),
+                  )),
+              Container(
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: TabBar(
+                    labelPadding: const EdgeInsets.only(left: 45, right: 40),
+                    controller: _tabController,
+                    labelColor: Colors.black,
+                    labelStyle: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "poppins"),
+                    unselectedLabelColor: Colors.grey,
+                    isScrollable: true,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    tabs: [Tab(text: "Hardware Items"), Tab(text: "Workers")],
+                  ),
+                ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 30, top: 2),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      margin:EdgeInsets.only(top: 25, left: 25, right: 25) ,
+                  child: Column(
                     children: [
-                      Text(
-                        "Categories",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontFamily: "poppins",
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            height: 1.15),
-                      ),
                       Container(
-                        padding: EdgeInsets.only(right: 30),
-                        child: Text(
-                          "See all",
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                              fontFamily: "poppins",
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey,
-                              height: 1),
+                        padding: EdgeInsets.only(right: 5,left:5),
+                        child: Row(
+                          children: [
+                            Flexible(
+                              flex: 1,
+                              child: TextField(
+                                style: TextStyle( height: 0.5 ),
+                                  cursorColor: Colors.grey,
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.only(right: 15,left: 18,top: 20,bottom: 20),
+                                      fillColor: Colors.white,
+                                      filled: true,
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                          borderSide: BorderSide.none
+                                        ),
+                                      hintText: 'Search Category...',
+                                      hintStyle: TextStyle(
+                                        
+                                        fontFamily: 'poppins',
+                                        color: Colors.grey,
+                                        fontSize: 16
+                                      ),
+                                    ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only (left: 10),
+                              padding: EdgeInsets.only(right:5,left: 5),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(15)
+                              ),
+                              child: IconButton(
+                                    icon: Icon(Icons.search, color: Colors.white),                                  
+                                    onPressed: () {
+                                      print("b"); 
+                                    },
+                                  ),
+                            ),
+                          ],
                         ),
+                      )
+                    ],
+                  ),
                       ),
-                    ]),
-              ),
-            ],
-          ),
-        )
-      ])),
+              Container(
+                height: 100,
+                width: double.maxFinite,
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 30, top: 2),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Most Popular Items",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontFamily: "poppins",
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.15),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(right: 30),
+                              child: Text(
+                                "See all",
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                    fontFamily: "poppins",
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey,
+                                    height: 1),
+                              ),
+                            ),
+                          ]),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 30, top: 2),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Categories",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontFamily: "poppins",
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.15),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(right: 30),
+                              child: Text(
+                                "See all",
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                    fontFamily: "poppins",
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey,
+                                    height: 1),
+                              ),
+                            ),
+                          ]),
+                    ),
+                  ],
+                ),
+              )
+            ])),
     );
   }
 }
