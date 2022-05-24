@@ -58,6 +58,7 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/cement.jpg
+    - assets/images/cement.png
     - assets/icons/search.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
