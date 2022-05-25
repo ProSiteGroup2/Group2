@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hardware_new/common/size.dart';
 //import '../common/color.dart';
-import 'package:hardware_new/components/size.dart';
+
 
 class ImageCauserol extends StatefulWidget {
   BuildContext context;
@@ -36,6 +37,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
         children: [
           // Image Causerol
           ListView.builder(
+            
               controller: _scrollController,
               scrollDirection: Axis.horizontal,
               itemCount: imgs.length,

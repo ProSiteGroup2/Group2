@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hardware_new/components/image_causerol.dart';
-import 'package:hardware_new/components/place.dart';
+import 'dart:ui';
 
 class HomeScreen extends StatefulWidget {
   @override
