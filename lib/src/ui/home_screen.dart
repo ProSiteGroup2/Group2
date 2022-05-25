@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hardware_new/components/image_causerol.dart';
+import 'package:hardware_new/components/place.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -6,6 +8,95 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+
+Map<String, dynamic> data = {
+    "isRegisted": true,
+    "for": "Boys",
+    'fee': {'per': 'Month', 'cost': 4000},
+    'location': {
+      'address': "15/1 , ABC Rd, ABC, 11850",
+      'lat': 7.526525,
+      'lng': 8.265977
+    },
+    'available': 5,
+    'about':
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus",
+    'images': [
+      'assets/imgs/logo.png'
+      'assets/imgs/cement.jpg'
+      'assets/imgs/cement.png',
+      'assets/img/house02.png'
+    ],
+    'owner': {
+      'name': "Rental Surat",
+      'who': "Owner",
+      'image': "assets/img/ava_2.png",
+      'contact_no': "+94750001112"
+    },
+    'rating': {
+      'overall': 4.5,
+      'outof': 5,
+      'reviews': [
+        {
+          'avatar': 'assets/img/ava_2.png',
+          'user_name': 'ACV IOP',
+          'rate': 4.5,
+          'review':
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus',
+        },
+        {
+          'avatar': 'assets/img/ava_2.png',
+          'user_name': 'IOP IOP',
+          'rate': 4.6,
+          'review': 'Lorem ipsum ',
+        },
+      ],
+    },
+    'facilities': [
+      {
+        'category': 1,
+        'type': "Table",
+        'amount': 3,
+        'description': "",
+        'price': 0,
+      },
+      {
+        'category': 2,
+        'type': "Hot Shower",
+        'amount': 3,
+        'description': "",
+        'price': 0,
+      },
+      {
+        'category': 3,
+        'type': "Breakfest",
+        'amount': 3,
+        'description': "with 03 curies",
+        'price': 120,
+      },
+      {
+        'category': 3,
+        'type': "Lunch",
+        'amount': 3,
+        'description': "with 04 curies",
+        'price': 120,
+      },
+      {
+        'category': 4,
+        'type': "Breakfest",
+        'amount': 3,
+        'description':
+            "with 03 curieswith 03 curieswith 03 curieswith 03 curieswith 03 curieswith 03 curieswith 03 curies",
+        'price': 120,
+      }
+    ],
+    'user': {
+      'id': "u1256369554",
+      'name': 'USER UIO',
+      'image': 'assets/img/ava_2.png'
+    }
+  };
+
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 2, vsync: this);
@@ -30,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         leading: Container(
           margin: EdgeInsets.only(left: 18, top: 12, bottom: 10),
           child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/logo.png'),
+            backgroundImage: AssetImage('assets/imgs/logo.png'),
           ),
         ),
       ),
@@ -157,90 +248,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ]),
                             ),
                            
-                            Container(
-                              width: 250,
-                              height: 100,
-                              margin: EdgeInsets.only( right:20,top: 20),
-                              decoration: BoxDecoration(
-                                 border: Border.all(width: 2, color: Colors.grey.shade200),
-                                 borderRadius: BorderRadius.all(Radius.circular(20)),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.05),
-                                      spreadRadius: 10,
-                                      blurRadius: 7,
-                                      offset: Offset(5, 4), // changes position of shadow
-                                    ),
-                                    BoxShadow(
-                                      color: Colors.white.withOpacity(0.5),
-                                      spreadRadius: 10,
-                                      blurRadius: 7,
-                                      offset: Offset(-10, -10), // changes position of shadow
-                                    ),
-                                  ],
+                           ImageCauserol(
+                              context: context,
+                                imgs: data['images'],
                               ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 110,
-                                    height: 100,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.white,
-                                      image: DecorationImage(
-                                        image: AssetImage("assets/images/cement.png"),
-                                        fit: BoxFit.cover,     
-                                        ),
-                                      ),
-                                  ),
-                                  Container(
-                                     margin: EdgeInsets.only(top: 20),
-                                     width: 100,
-                                    height: 100,
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          child: Text("Cement",
-                                        textAlign: TextAlign.right,
-                                        style: TextStyle(
-                                            fontFamily: "poppins",
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-                                            height: 1.15),),
-                                        ),
-                                        Container(
-                                          width: 100,
-                                          margin: EdgeInsets.all(7),
-                                          padding: EdgeInsets.only(left:2.0,right: 2),
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                width: 20,
-                                                child: Icon(Icons.location_on,size: 12.0,)),
-                                              Container(
-                                                width:60,
-                                                padding: EdgeInsets.only(left:3.0,right: 2),
-                                                child: Text(
-                                                  "Perera Hardware, Maharagama",
-                                                   style: TextStyle(
-                                                     fontSize: 8),
-                                                     maxLines:3,
-                                                     overflow: TextOverflow.ellipsis
-                                                     ,softWrap: false,
-                                                     ))
-                                            ],
-                                          ),
-                                        )
-
-                                        
-                                      ],
-                                      
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
+                            ],
                         ),
                             
                       ),
