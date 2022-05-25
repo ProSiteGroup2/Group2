@@ -31,7 +31,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: kPropWidth(context, 1) - 32,
-      height: 150,
+      height: 120,
       child: Stack(
         children: [
           // Image Causerol
@@ -43,7 +43,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
                 return Container(
                               width: 250,
                               height: 100,
-                              margin: EdgeInsets.only( right:20,top: 20),
+                              margin: EdgeInsets.only( right:20,top: 15),
                               decoration: BoxDecoration(
                                  border: Border.all(width: 2, color: Colors.grey.shade200),
                                  borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -71,7 +71,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
                                       borderRadius: BorderRadius.circular(20),
                                       color: Colors.white,
                                       image: DecorationImage(
-                                        image: AssetImage("assets/imgs/cement.png"),
+                                        image: AssetImage("${imgs[i]}"),
                                         fit: BoxFit.cover,     
                                         ),
                                       ),
@@ -146,7 +146,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
           //             "$photo",
           //             style: const TextStyle(
           //                 fontSize: 14.0,
-          //                 color: Colors.white,
+          //                 color: Colors.black,
           //                 fontWeight: FontWeight.w600),
           //           ),
           //           const SizedBox(

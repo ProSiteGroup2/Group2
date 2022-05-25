@@ -22,15 +22,17 @@ Map<String, dynamic> data = {
     'about':
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus",
     'images': [
-      'assets/imgs/logo.png'
-      'assets/imgs/cement.jpg'
+      'assets/imgs/brush.jpg',
+      'assets/imgs/stee.jpg',
+      'assets/imgs/cement.jpg',
       'assets/imgs/cement.png',
-      'assets/img/house02.png'
+      'assets/imgs/logo.png',
+      
     ],
     'owner': {
       'name': "Rental Surat",
       'who': "Owner",
-      'image': "assets/img/ava_2.png",
+      'image': "assets/imgs/logo.png",
       'contact_no': "+94750001112"
     },
     'rating': {
@@ -38,14 +40,14 @@ Map<String, dynamic> data = {
       'outof': 5,
       'reviews': [
         {
-          'avatar': 'assets/img/ava_2.png',
+          'avatar': 'assets/imgs/logo.png',
           'user_name': 'ACV IOP',
           'rate': 4.5,
           'review':
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus Nullam justo velit, iaculis ac diam et, condimentum molestie felis. Curabitur maximus turpis ut vehicula aliquet. Proin vitae eleifend metus',
         },
         {
-          'avatar': 'assets/img/ava_2.png',
+          'avatar': 'assets/imgs/logo.png',
           'user_name': 'IOP IOP',
           'rate': 4.6,
           'review': 'Lorem ipsum ',
@@ -93,7 +95,7 @@ Map<String, dynamic> data = {
     'user': {
       'id': "u1256369554",
       'name': 'USER UIO',
-      'image': 'assets/img/ava_2.png'
+      'image': 'assets/imgs/logo.png'
     }
   };
 
