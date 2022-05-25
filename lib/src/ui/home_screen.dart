@@ -35,8 +35,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
       ),
       body: SafeArea(  
-        
-          child: SingleChildScrollView(
+         child: SingleChildScrollView(
             child: Column(children: [  
               
                 Container(
@@ -186,16 +185,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     width: 110,
                                     height: 100,
                                     decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    image: DecorationImage(
-                                      image: AssetImage("assets/images/cement.png"),
-                                      fit: BoxFit.cover,     
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.white,
+                                      image: DecorationImage(
+                                        image: AssetImage("assets/images/cement.png"),
+                                        fit: BoxFit.cover,     
+                                        ),
                                       ),
-                                    ),
                                   ),
                                   Container(
-                                     margin: EdgeInsets.only(right:15,top: 20),
+                                     margin: EdgeInsets.only(top: 20),
                                      width: 100,
                                     height: 100,
                                     child: Column(
@@ -210,13 +209,25 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             height: 1.15),),
                                         ),
                                         Container(
-                                          width: 80,
+                                          width: 100,
                                           margin: EdgeInsets.all(7),
                                           padding: EdgeInsets.only(left:2.0,right: 2),
                                           child: Row(
                                             children: [
-                                              Container(child: Icon(Icons.location_on,size: 13.0,)),
-                                              Container(width:60,padding: EdgeInsets.only(left:3.0,right: 2),child: Text("Perera Hardware,\n Maharagama",style: TextStyle(fontSize: 8),maxLines:2,overflow: TextOverflow.ellipsis,softWrap: false,))
+                                              Container(
+                                                width: 20,
+                                                child: Icon(Icons.location_on,size: 12.0,)),
+                                              Container(
+                                                width:60,
+                                                padding: EdgeInsets.only(left:3.0,right: 2),
+                                                child: Text(
+                                                  "Perera Hardware, Maharagama",
+                                                   style: TextStyle(
+                                                     fontSize: 8),
+                                                     maxLines:3,
+                                                     overflow: TextOverflow.ellipsis
+                                                     ,softWrap: false,
+                                                     ))
                                             ],
                                           ),
                                         )
@@ -270,27 +281,3 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 }
-
-// class CustomSearchDelegate extends SearchDelegate{
-//   @override
-//   List<Widget> buildActions(BuildContext context) {
-//     // TODO: implement buildActions
-//     // throw UnimplementedError();
-//   }
-//   @override
-//   Widget buildLeading(BuildContext context){
-
-//   }
-//    @override
-//   Widget buildResults(BuildContext context){
-
-//   }
-//    @override
-//   Widget buildSuggestions(BuildContext context){
-
-//   }
-
-  
-
-
-
