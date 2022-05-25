@@ -393,6 +393,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
+
+                  SizedBox(height: 40.0),
+
+                  Container(
+                    margin: EdgeInsets.fromLTRB(100.0, 0.0, 60.0, 30.0),
+                    child:ElevatedButton.icon(
+                      label: Icon(Icons.lock),
+                      icon: Text('Changed Password',style:TextStyle(color: Colors.white),),
+                      onPressed: () {  },
+                    ),
+                  )
                 ],
               ),
             ),
