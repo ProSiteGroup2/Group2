@@ -134,7 +134,7 @@ Map<String, dynamic> data = {
                 Container(
                     margin: const EdgeInsets.only(left: 10, top: 10, right: 200, bottom: 10),
                     child: Text(
-                      "Find your\nNeed",
+                      "Find Your\nNeed",
                       style: TextStyle(
                           fontFamily: "poppins",
                           fontSize: 33,
