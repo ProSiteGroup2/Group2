@@ -178,7 +178,7 @@ Map<String, dynamic> data = {
                                         fillColor: Colors.white,
                                         filled: true,
                                           border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(20),
+                                            borderRadius: BorderRadius.circular(15),
                                             borderSide: BorderSide.none
                                           ),
                                         hintText: 'Search Category...',
@@ -212,16 +212,20 @@ Map<String, dynamic> data = {
                     ),
                         ),
                 Container(
-                  height: 200,
+                 height: MediaQuery.of(context).size.height,
                   width: double.maxFinite,
                   child: TabBarView(
                     controller: _tabController,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 30, top: 18),
+                        height: 800,
+                        padding: EdgeInsets.symmetric(vertical: 16.0,horizontal: 18.0),
                         child: Column(
                           children: [
                             Container(
+                              child: Column(
+                                children: [
+                                     Container(
                               child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
@@ -254,6 +258,53 @@ Map<String, dynamic> data = {
                               context: context,
                                 imgs: data['images'],
                               ),
+                                ],
+                              ),
+                            ),
+                             Container(
+                              child: Column(
+                                children: [
+                                     Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "This Week best offers",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontFamily: "poppins",
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          height: 1.15),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text(
+                                        "See all",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                            height: 1),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                           
+                           Container(
+                             height: 200,
+                             width: 500,
+                             child: ImageCauserol(
+                                context: context,
+                                  imgs: data['images'],
+                                ),
+                           ),
+                                ],
+                              ),
+                            ),
+                           
                             ],
                         ),
                             
