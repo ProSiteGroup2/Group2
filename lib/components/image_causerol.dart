@@ -31,7 +31,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: kPropWidth(context, 1) - 32,
+      width: kPropWidth(context, 1) ,
       height:140,
       child: ListView.builder(
         
@@ -40,6 +40,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
           itemCount: imgs.length,
           itemBuilder: (context, i) {
             return Container(
+                          
                           margin: EdgeInsets.all(20),
                           width: 250,
                           height: 100,
@@ -70,6 +71,7 @@ class _ImageCauserolState extends State<ImageCauserol> {
                                 width: 110,
                                 height: 100,
                                 decoration: BoxDecoration(
+                                  border: Border.all(width: 1, color: Colors.grey.shade200),
                                   borderRadius: BorderRadius.circular(20),
                                   color: Colors.white,
                                   image: DecorationImage(

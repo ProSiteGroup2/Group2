@@ -146,11 +146,11 @@ Map<String, dynamic> data = {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: TabBar(
-                      labelPadding: const EdgeInsets.only(left: 45, right: 40),
+                      labelPadding: const EdgeInsets.only(left: 40, right: 40),
                       controller: _tabController,
                       labelColor: Colors.black,
                       labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           fontFamily: "poppins"),
                       unselectedLabelColor: Colors.grey,
@@ -213,13 +213,13 @@ Map<String, dynamic> data = {
                         ),
                 Container(
                  height: MediaQuery.of(context).size.height,
-                  width: double.maxFinite,
+                  width: MediaQuery.of(context).size.width,
                   child: TabBarView(
                     controller: _tabController,
                     children: [
                       Container(
                         height: 800,
-                        padding: EdgeInsets.symmetric(vertical: 16.0,horizontal: 18.0),
+                        padding: EdgeInsets.symmetric(vertical: 16.0,horizontal: 0.0),
                         child: Column(
                           children: [
                             Container(
@@ -229,14 +229,17 @@ Map<String, dynamic> data = {
                               child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "Most Popular Items",
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                          fontFamily: "poppins",
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.15),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                      child: Text(
+                                        "Most Popular Items",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
                                     ),
                                     Container(
                                       padding: EdgeInsets.only(right: 30),
@@ -254,10 +257,14 @@ Map<String, dynamic> data = {
                                   ]),
                             ),
                            
-                           ImageCauserol(
-                              context: context,
-                                imgs: data['images'],
-                              ),
+                           Container(
+                             
+                             child: ImageCauserol(
+                               
+                                context: context,
+                                  imgs: data['images'],
+                                ),
+                           ),
                                 ],
                               ),
                             ),
@@ -268,14 +275,17 @@ Map<String, dynamic> data = {
                               child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      "This Week best offers",
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                          fontFamily: "poppins",
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.15),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                      child: Text(
+                                        "This Week best offers",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
                                     ),
                                     Container(
                                       padding: EdgeInsets.only(right: 30),
@@ -310,35 +320,201 @@ Map<String, dynamic> data = {
                             
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, top: 2),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Categories",
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    fontFamily: "poppins",
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.15),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(right: 30),
-                                child: Text(
-                                  "See all",
-                                  textAlign: TextAlign.right,
-                                  style: TextStyle(
-                                      fontFamily: "poppins",
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey,
-                                      height: 1),
+                        height: 800,
+                        padding: EdgeInsets.symmetric(vertical: 16.0,horizontal: 0.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Column(
+                                children: [
+                                     Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                                      child: Text(
+                                        "Constructors",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text(
+                                        "See all",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                            height: 1),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                           
+                           Container(
+                             
+                             child: ImageCauserol(
+                               
+                                context: context,
+                                  imgs: data['images'],
                                 ),
+                           ),
+                                ],
                               ),
-                            ]),
+                            ),
+                             Container(
+                              child: Column(
+                                children: [
+                                     Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                                      child: Text(
+                                        "Masons",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text(
+                                        "See all",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                            height: 1),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                           
+                           Container(
+                             
+                             child: ImageCauserol(
+                               
+                                context: context,
+                                  imgs: data['images'],
+                                ),
+                           ),
+                                ],
+                              ),
+                            ),
+                             Container(
+                              child: Column(
+                                children: [
+                                     Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                                      child: Text(
+                                        "Electricians",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text(
+                                        "See all",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                            height: 1),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                           
+                           Container(
+                             
+                             child: ImageCauserol(
+                               
+                                context: context,
+                                  imgs: data['images'],
+                                ),
+                           ),
+                                ],
+                              ),
+                            ),
+                             Container(
+                              child: Column(
+                                children: [
+                                     Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                                      child: Text(
+                                        "Plumbers",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text(
+                                        "See all",
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey,
+                                            height: 1),
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                           
+                           Container(
+                             
+                             child: ImageCauserol(
+                               
+                                context: context,
+                                  imgs: data['images'],
+                                ),
+                           ),
+                                ],
+                              ),
+                            ),
+                            
+                            ],
+                        ),
+                            
                       ),
-                    ],
+                      
+                      ],
                   ),
                 )
               ]),
