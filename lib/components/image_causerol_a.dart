@@ -47,7 +47,7 @@ class _ImageCauserol_aState extends State<ImageCauserol_a> {
                           
                           // margin: EdgeInsets.only( right:20,top: 15),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.white70,
                             //  border: Border.all(width: 2, color: Colors.grey.shade200),
                              borderRadius: BorderRadius.all(Radius.circular(20)),
                               boxShadow: [
@@ -67,79 +67,47 @@ class _ImageCauserol_aState extends State<ImageCauserol_a> {
                           ),
                           
                           child: Stack(
+                            alignment: AlignmentDirectional.center,
                             children: [
                               Container(
-                                height: 100,
-                                width: 200,
-                                  decoration: BoxDecoration(
-                                          
-                                         border: Border.all(width: 2, color: Colors.black),
-                                         borderRadius: BorderRadius.all(Radius.circular(20)),
-                                  ),
-                              ),
-
-                              Container(
                                     child: Row(
-                              children: [
-                                Container(
-                                  child: Container(
-                                    width: 140,
-                                    height: 200,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(width: 1, color: Colors.grey.shade200),
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.white,
-                                      
-                                      image: DecorationImage(
-                                        
-                                        image: AssetImage("${imgs[i]}"),
-                                        fit: BoxFit.cover,     
+                                      children: [
+                                          Container(
+                                            child: Container(
+                                              width: 140,
+                                              height: 200,
+                                              decoration: BoxDecoration(
+                                                border: Border.all(width: 1, color: Colors.grey.shade200),
+                                                borderRadius: BorderRadius.circular(20),
+                                                color: Colors.white,
+                                            
+                                            image: DecorationImage(
+                                              
+                                              image: AssetImage("${imgs[i]}"),
+                                              fit: BoxFit.cover,     
+                                              ),
+                                            ),
+                                            
                                         ),
                                       ),
-                                      
-                                  ),
-                                ),
-                                 Container(
-                                   margin: EdgeInsets.only(top: 20),
-                                   width: 70,
-                                  height: 100,
-                                  child: Column(
-                                    children: [
                                       Container(
-                                        child: Text("Cement",
-                                      textAlign: TextAlign.right,
-                                      style: TextStyle(
-                                          fontFamily: "poppins",
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                          height: 1.15),),
-                                      ),
-                                      // Container(
-                                      //   width: 100,
-                                      //   margin: EdgeInsets.all(7),
-                                      //   padding: EdgeInsets.only(left:2.0,right: 2),
-                                      //   child: Row(
-                                      //     children: [
-                                      //       Container(
-                                      //         width: 20,
-                                      //         child: Icon(Icons.location_on,size: 12.0,)),
-                                      //       Container(
-                                      //         width:60,
-                                      //         padding: EdgeInsets.only(left:3.0,right: 2),
-                                      //         child: Text(
-                                      //           "Perera Hardware, Maharagama",
-                                      //            style: TextStyle(
-                                      //              fontSize: 8),
-                                      //              maxLines:3,
-                                      //              overflow: TextOverflow.ellipsis
-                                      //              ,softWrap: false,
-                                      //              ))
-                                      //     ],
-                                      //   ),
-                                      // )
-                          
-                                      
-                                    ],
+                                        margin: EdgeInsets.only(top: 20),
+                                        width: 70,
+                                        height: 100,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: Text("10%\n Discount",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontFamily: "poppins",
+                                                fontSize: 13,
+                                                fontWeight: FontWeight.bold,
+                                                height: 1.15),),
+                                            ),
+                                            //                              
+                                            
+                                          ],
                                     
                                   ),
                                 )
@@ -147,8 +115,73 @@ class _ImageCauserol_aState extends State<ImageCauserol_a> {
                                ],
                             ),
                           
-                              )
-                            ],
+                              ),
+                            
+                              Positioned(
+                                bottom: 15,
+                                right: 18,
+                                
+                                child: Container(
+                                  height: 50,
+                                  width: 180,
+                                  alignment: Alignment.centerRight,
+                                    decoration: BoxDecoration(
+                                          color: Colors.white70,
+                                           border: Border.all(width: 2, color: Colors.grey.shade200),
+                                           borderRadius: BorderRadius.all(Radius.circular(15)),
+                                           boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey.withOpacity(0.25),
+                                                spreadRadius: 1,
+                                                blurRadius: 4,
+                                                offset: Offset(5, 5), // changes position of shadow
+                                              ),]
+                                            
+                                            
+                                    ),
+                                    child: Column( 
+                                      children: [
+                                           Container(
+                                             margin: EdgeInsets.all(5),
+                                             alignment: Alignment.center,
+                                             child: Text("Lanwa Cement", 
+                                                          style: TextStyle(
+                                                                color: Colors.black,
+                                                                fontFamily: "poppins",
+                                                                fontSize: 14,
+                                                                fontWeight: FontWeight.bold,
+                                                                height: 1.15),
+                                                                ),
+                                                      ),
+                                            Container(
+                                              width: kPropWidth(context, 1),
+                                              padding: EdgeInsets.only(left:2.0),
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    width: 10,
+                                                    child: Icon(Icons.location_on,size: 12.0,)),
+                                                  Container(
+                                                    padding: EdgeInsets.fromLTRB(5, 0, 0, 2),  
+                                                    alignment: Alignment.center,                                                 
+                                                    child: Text(
+                                                      "Perera Hardware, Maharagama.",
+                                                       style: TextStyle(
+                                                         fontSize: 9),
+                                                         maxLines:3,
+                                                         overflow: TextOverflow.ellipsis
+                                                         ,softWrap: false,
+                                                         ))
+                                                ],
+                                              ),
+                                            )
+                                        ],
+                                    ),
+                                ),
+                              ),
+
+                              ],
+                            
                             ),
                         );
 

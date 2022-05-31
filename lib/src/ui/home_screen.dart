@@ -181,7 +181,9 @@ Map<String, dynamic> data = {
                                           border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(15),
                                             borderSide: BorderSide.none
+                                            
                                           ),
+                                          
                                         hintText: 'Search Category...',
                                         hintStyle: TextStyle(
                                           
