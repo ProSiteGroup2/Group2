@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hardware_new/components/image_causerol.dart';
+import 'package:hardware_new/components/image_causerol_a.dart';
 import 'dart:ui';
 
 class HomeScreen extends StatefulWidget {
@@ -304,9 +305,9 @@ Map<String, dynamic> data = {
                             ),
                            
                            Container(
-                             height: 200,
-                             width: 500,
-                             child: ImageCauserol(
+                            //  height: 200,
+                            //  width: 200,
+                             child: ImageCauserol_a(
                                 context: context,
                                   imgs: data['images'],
                                 ),
