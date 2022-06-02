@@ -37,7 +37,8 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+               Container(
+                 //image box 
                  width: kPropWidth(context, 1) - 20,
                   height: kPropHeight(context, 0.40) - 32,
                   margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -68,7 +69,8 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                       ),
                     ),
               ),
-              Container(
+               Container(
+                //Title and price
                  width: kPropWidth(context, 1) - 70,
                   height: kPropHeight(context, 0.42) - 252,
                   
@@ -77,7 +79,7 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                   children: [
                     Text("Safety Goggles",style: TextStyle(fontFamily: "poppins",fontSize: 22,fontWeight: FontWeight.w700,height: 2)),
                     Container(
-                      
+                      //price            
                       width: kPropWidth(context, 0.22) ,
                       height: kPropHeight(context, 0.035),
                       decoration: BoxDecoration(
@@ -95,7 +97,8 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                 ),
                 
               ),
-              Container(
+               Container(
+                //tabs
                     child: Align(
                       alignment: Alignment.center,
                       child: TabBar(
@@ -120,10 +123,12 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                       controller: _tabController,
                       children: [
                               Container(
+                                //details tab
                                 margin: EdgeInsets.only( top: 15),
                                 child: Column(
                                   children: [
                                     Container(
+                                      //details tab details
                                        width: kPropWidth(context, 1) - 32,
                                         //height: kPropHeight(context, 0.4) - 32,
                                         margin: EdgeInsets.only(left: 20,right: 20,top: 15),
@@ -137,8 +142,9 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                                             letterSpacing: 0.5,
                                             height: 1.15),
                                       ),
-                              ),
+                                      ),
                                     Container(
+                                      //blue clr link
                                       margin: EdgeInsets.only(left: 22,right: 15),
                                       alignment: Alignment.topLeft,
                                       child: new InkWell(
@@ -151,6 +157,7 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                               
                         ),
                               Container(
+                                //specifications tab
                                 margin: EdgeInsets.only( top: 15),
                                 child: Column(
                                   children: [
@@ -222,52 +229,189 @@ class _ItemDetailsState extends State<ItemDetails> with TickerProviderStateMixin
                           ),
                               
                         ),
-                              Container(
-                          margin: EdgeInsets.only(left: 30, top: 18),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: kPropWidth(context, 1) - 32,
-                                height: kPropHeight(context, 0.1) - 32,
-                                child: Text(
-                                  "Reviews",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      fontFamily: "poppins",
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      height: 1.15),
-                                ),
-                              ),
+                               Container(
+                                //details tab
+                                margin: EdgeInsets.only( top: 15),
+                                child: Column(
+                                  children: [
+                                    // Container(
+                                    //     //Review title
+                                    //         margin: EdgeInsets.only(left: 30, top: 10),
+                                    //         child: Column(
+                                    //           children: [
+                                    //             Container(
+                                    //               width: kPropWidth(context, 1) - 32,
+                                    //               height: kPropHeight(context, 0.1) - 32,
+                                    //               child: Text(
+                                    //                 "Reviews",
+                                    //                 textAlign: TextAlign.left,
+                                    //                 style: TextStyle(
+                                    //                     fontFamily: "poppins",
+                                    //                     fontSize: 14,
+                                    //                     fontWeight: FontWeight.bold,
+                                    //                     height: 1.15),
+                                    //               ),
+                                    //             ),
+                                    //             ],
+                                    //         ),
+                                    //     ),
+                                    Container(
+                                      //details tab details
+                                       width: kPropWidth(context, 1) - 32,
+                                        //height: kPropHeight(context, 0.4) - 32,
+                                        margin: EdgeInsets.only(left: 20,right: 20,top: 20),
+                                      child: Text(
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                                        textAlign: TextAlign.justify,
+                                        style: TextStyle(
+                                            fontFamily: "poppins",
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w400,
+                                            letterSpacing: 0.5,
+                                            height: 1.15),
+                                      ),
+                                      ),
+                                    Container(
+                                      //blue clr link
+                                      margin: EdgeInsets.only(left: 22,right: 15),
+                                      alignment: Alignment.topLeft,
+                                      child: new InkWell(
+                                      
+                                          child: new Text('See more . . .',style: TextStyle(fontFamily: "poppins",color: Colors.blue[800],),),
+                                          onTap: () => launch('https://www.youtube.com/')
+                                      ),)
                               ],
                           ),
                               
                         ),
                               Container(
-                          margin: EdgeInsets.only(left: 30, top: 18),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: kPropWidth(context, 1) - 32,
-                                height: kPropHeight(context, 0.1) - 32,
-                                child: Text(
-                                  "About",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      fontFamily: "poppins",
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      height: 1.15),
+                                //about seller tab
+                                  margin: EdgeInsets.only(left: 30, top: 18),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: kPropWidth(context, 1) - 32,
+                                        height: kPropHeight(context, 0.1) - 32,
+                                        child: Text(
+                                          "About",
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                              fontFamily: "poppins",
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              height: 1.15),
+                                        ),
+                                      ),
+                                      ],
+                                  ),
+                                      
                                 ),
-                              ),
-                              ],
-                          ),
-                              
-                        ),
                               ],
                     ),
-                  )
-                
+                  ),
+               Container(
+                    //buttons 
+                      margin:EdgeInsets.all(20) ,
+                      child: Container(
+                        padding: EdgeInsets.only(right: 5,left:5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                                //buy now
+                                width: kPropWidth(context, 0.37) ,
+                                height: kPropHeight(context, 0.06),
+                                    margin: EdgeInsets.only (left: 10),
+                                    padding: EdgeInsets.only(right:5,left: 5),
+                                    decoration: BoxDecoration(
+                                      color: Theme.of(context).primaryColor,
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(0.25),
+                                            spreadRadius: 10,
+                                            blurRadius: 7,
+                                            offset: Offset(2, 5), // changes position of shadow
+                                          ),
+                                          BoxShadow(
+                                            color: Colors.white.withOpacity(0.8),
+                                            spreadRadius: 10,
+                                            blurRadius: 7,
+                                            offset: Offset(-10, -10), // changes position of shadow
+                                          ),
+                                        ],
+                                      
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          //buy now text
+                                          alignment: Alignment.centerRight,
+                                          child: Text("Buy Now", style: TextStyle(fontFamily: "poppins",fontWeight: FontWeight.bold,color: Colors.black),),
+                                        ),
+                                        Container(
+                                          //buy now icon
+                                          child: IconButton(
+                                            icon: Icon(Icons.account_balance_wallet_rounded, color: Colors.black),                                  
+                                            onPressed: () {
+                                              print("buy now"); 
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                      
+                                    ),
+                                  ),
+                            Container(
+                              //add to cart
+                                  width: kPropWidth(context, 0.37) ,
+                                  height: kPropHeight(context, 0.06),
+                                  margin: EdgeInsets.only (left: 10),
+                                  padding: EdgeInsets.only(right:5,left: 5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.cyan[300],
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.25),
+                                          spreadRadius: 10,
+                                          blurRadius: 7,
+                                          offset: Offset(2, 5), // changes position of shadow
+                                        ),
+                                        BoxShadow(
+                                          color: Colors.white.withOpacity(0.8),
+                                          spreadRadius: 10,
+                                          blurRadius: 7,
+                                          offset: Offset(-10, -10), // changes position of shadow
+                                        ),
+                                      ],
+                                  ),
+                                  child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          //add cart text
+                                          alignment: Alignment.centerRight,
+                                          child: Text("Add to Cart", style: TextStyle(fontFamily: "poppins",fontWeight: FontWeight.bold,color: Colors.black),),
+                                        ),
+                                        Container(
+                                          //add cart icon
+                                          child: IconButton(
+                                            icon: Icon(Icons.shopping_bag_rounded, color: Colors.black),                                  
+                                            onPressed: () {
+                                              print("add to cart"); 
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                      
+                                    ),
+                                ),
+                          ],
+                        ),
+                      ),
+                          ),
             ],
           ),
         ),

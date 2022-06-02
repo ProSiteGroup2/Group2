@@ -25,14 +25,14 @@ class _ImageCauserol_bState extends State<ImageCauserol_b> {
 
   final ScrollController _scrollController = ScrollController();
 
-  @override
+ 
 
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: kPropWidth(context, 1) ,
-      height:140,
+       width: kPropWidth(context, 1),
+       height:kPropHeight(context, 0.3) ,
       child: ListView.builder(
         
           controller: _scrollController,
@@ -42,8 +42,7 @@ class _ImageCauserol_bState extends State<ImageCauserol_b> {
             return Container(
                           
                           margin: EdgeInsets.all(20),
-                          width: 250,
-                          height: 100,
+                         
                           
                           // margin: EdgeInsets.only( right:20,top: 15),
                           decoration: BoxDecoration(
