@@ -3,6 +3,11 @@ import 'package:hardware_new/common/size.dart';
 import 'package:hardware_new/components/image_causerol.dart';
 import 'package:hardware_new/components/image_causerol_a.dart';
 import 'package:hardware_new/components/image_causerol_b.dart';
+import 'package:hardware_new/src/ui/Steel.dart';
+import 'package:hardware_new/src/ui/Bricks.dart';
+import 'package:hardware_new/src/ui/Cement.dart';
+import 'package:hardware_new/src/ui/Sand.dart';
+import 'package:hardware_new/src/ui/item_details.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -136,7 +141,7 @@ Map<String, dynamic> data = {
                         child: Column(
                           children: [
                             Container(
-                            margin: const EdgeInsets.only(left: 10, top: 10, right: 200, bottom: 10),
+                            margin: const EdgeInsets.only(left: 10, top: 5, right: 200, bottom: 10),
                             child: Text(
                               "Find Your\nNeed",
                               style: TextStyle(
@@ -234,6 +239,242 @@ Map<String, dynamic> data = {
                                 ),
                                     ),
                               Container(
+                                //Categories
+                                child: Column(
+                                  children: [
+                                      Container(
+                                        child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                          Container(
+                                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                            child: Text(
+                                              "Categories",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                  fontFamily: "poppins",
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                  height: 1.15),
+                                            ),
+                                          ),
+                                          
+                                            ]),
+                                          ),         
+                                      Container( 
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              //row1
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    //Cement
+                                                    margin: EdgeInsets.fromLTRB(25, 10, 20, 15),
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        
+                                                        // margin: EdgeInsets.only( right:20,top: 15),
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.white,
+                                                          //  border: Border.all(width: 2, color: Colors.grey.shade200),
+                                                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors.grey.withOpacity(0.25),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(2, 5), // changes position of shadow
+                                                              ),
+                                                              BoxShadow(
+                                                                color: Colors.white.withOpacity(0.8),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(-10, -10), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                        ),
+
+
+                                                    child: ElevatedButton(
+                                                      onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(builder: (context) =>cement()),
+                                                          );
+                                                        },
+                                                        style: ElevatedButton.styleFrom(
+                                                          
+                                                          primary: Colors.white,
+                                                          shadowColor: Colors. transparent,
+                                                          padding: EdgeInsets.symmetric(
+                                                            vertical: 0.0, horizontal: 0.0),
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: new BorderRadius.circular(20.0),
+                                                            ),
+                                                          ), child: null, 
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    //Bricks
+                                                    margin: EdgeInsets.fromLTRB(12, 10, 22, 15),
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        
+                                                        // margin: EdgeInsets.only( right:20,top: 15),
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.white,
+                                                          //  border: Border.all(width: 2, color: Colors.grey.shade200),
+                                                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors.grey.withOpacity(0.25),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(2, 5), // changes position of shadow
+                                                              ),
+                                                              BoxShadow(
+                                                                color: Colors.white.withOpacity(0.8),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(-10, -10), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                        ),
+
+
+                                                    child: ElevatedButton(
+                                                      onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(builder: (context) =>bricks()),
+                                                          );
+                                                        },
+                                                        style: ElevatedButton.styleFrom(
+                                                          
+                                                          primary: Colors.white,
+                                                          shadowColor: Colors. transparent,
+                                                          padding: EdgeInsets.symmetric(
+                                                            vertical: 0.0, horizontal: 0.0),
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: new BorderRadius.circular(20.0),
+                                                            ),
+                                                          ), child: null, 
+                                                    ),
+                                                  )
+                                                
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              //row2
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    //steel
+                                                    margin: EdgeInsets.fromLTRB(25, 15, 20, 20),
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        
+                                                        // margin: EdgeInsets.only( right:20,top: 15),
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.white,
+                                                          //  border: Border.all(width: 2, color: Colors.grey.shade200),
+                                                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors.grey.withOpacity(0.25),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(2, 5), // changes position of shadow
+                                                              ),
+                                                              BoxShadow(
+                                                                color: Colors.white.withOpacity(0.8),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(-10, -10), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                        ),
+
+
+                                                    child: ElevatedButton(
+                                                      onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(builder: (context) =>steel()),
+                                                          );
+                                                        },
+                                                        style: ElevatedButton.styleFrom(
+                                                          
+                                                          primary: Colors.white,
+                                                          shadowColor: Colors. transparent,
+                                                          padding: EdgeInsets.symmetric(
+                                                            vertical: 0.0, horizontal: 0.0),
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: new BorderRadius.circular(20.0),
+                                                            ),
+                                                          ), child: null, 
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    //sand
+                                                    margin: EdgeInsets.fromLTRB(12, 15, 22, 20),
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        
+                                                        // margin: EdgeInsets.only( right:20,top: 15),
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.white,
+                                                          //  border: Border.all(width: 2, color: Colors.grey.shade200),
+                                                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors.grey.withOpacity(0.25),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(2, 5), // changes position of shadow
+                                                              ),
+                                                              BoxShadow(
+                                                                color: Colors.white.withOpacity(0.8),
+                                                                spreadRadius: 10,
+                                                                blurRadius: 7,
+                                                                offset: Offset(-10, -10), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                        ),
+
+
+                                                    child: ElevatedButton(
+                                                      onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(builder: (context) =>sand()),
+                                                          );
+                                                        },
+                                                        style: ElevatedButton.styleFrom(
+                                                          
+                                                          primary: Colors.white,
+                                                          shadowColor: Colors. transparent,
+                                                          padding: EdgeInsets.symmetric(
+                                                            vertical: 0.0, horizontal: 0.0),
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: new BorderRadius.circular(20.0),
+                                                            ),
+                                                          ), child: null, 
+                                                    ),
+                                                  )
+                                                
+                                                ],
+                                              ),
+                                            )
+                                          
+                                          ],),
+                                      ),
+                                            ],
+                                          ),
+                                        ),
+                              Container(
                                 //most pop
                                 child: Column(
                                   children: [
@@ -253,19 +494,7 @@ Map<String, dynamic> data = {
                                                   height: 1.15),
                                             ),
                                           ),
-                                          Container(
-                                            padding: EdgeInsets.only(right: 30),
-                                            child: Text(
-                                              "See all",
-                                              textAlign: TextAlign.right,
-                                              style: TextStyle(
-                                                  fontFamily: "poppins",
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.grey,
-                                                  height: 1),
-                                            ),
-                                          ),
+                                         
                                             ]),
                                           ),         
                                       Container( 
@@ -297,19 +526,7 @@ Map<String, dynamic> data = {
                                                       height: 1.15),
                                                 ),
                                               ),
-                                          Container(
-                                            padding: EdgeInsets.only(right: 30),
-                                            child: Text(
-                                              "See all",
-                                              textAlign: TextAlign.right,
-                                              style: TextStyle(
-                                                  fontFamily: "poppins",
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.grey,
-                                                  height: 1),
-                                            ),
-                                          ),
+                                         
                                         ]),
                                   ),
                                 
@@ -323,50 +540,7 @@ Map<String, dynamic> data = {
                                       ],
                                 ),
                               ),
-                              Container(
-                                //Categories
-                                child: Column(
-                                  children: [
-                                      Container(
-                                        child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                          Container(
-                                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
-                                            child: Text(
-                                              "Categories",
-                                              textAlign: TextAlign.left,
-                                              style: TextStyle(
-                                                  fontFamily: "poppins",
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                  height: 1.15),
-                                            ),
-                                          ),
-                                          Container(
-                                            padding: EdgeInsets.only(right: 30),
-                                            child: Text(
-                                              "See all",
-                                              textAlign: TextAlign.right,
-                                              style: TextStyle(
-                                                  fontFamily: "poppins",
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.grey,
-                                                  height: 1),
-                                            ),
-                                          ),
-                                            ]),
-                                          ),         
-                                      Container( 
-                                        child: ImageCauserol_b(
-                                            context: context,
-                                              imgs: data['images'],
-                                            ),
-                                      ),
-                                            ],
-                                          ),
-                                        ),
+                              
                               
                               ],
                           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hardware_new/common/size.dart';
+import 'package:hardware_new/src/ui/item_details.dart';
 //import '../common/color.dart';
 
 
@@ -69,52 +70,69 @@ class _ImageCauserol_aState extends State<ImageCauserol_a> {
                           child: Stack(
                             alignment: AlignmentDirectional.center,
                             children: [
-                              Container(
-                                    child: Row(
-                                      children: [
-                                          Container(
-                                            child: Container(
-                                              width: 140,
-                                              height: 200,
-                                              decoration: BoxDecoration(
-                                                border: Border.all(width: 1, color: Colors.grey.shade200),
-                                                borderRadius: BorderRadius.circular(20),
-                                                color: Colors.white,
-                                            
-                                            image: DecorationImage(
-                                              
-                                              image: AssetImage("${imgs[i]}"),
-                                              fit: BoxFit.cover,     
-                                              ),
-                                            ),
-                                            
-                                        ),
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(top: 20),
-                                        width: 70,
-                                        height: 100,
-                                        child: Column(
-                                          children: [
-                                            Container(
-                                              child: Text("10%\n Discount",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                fontFamily: "poppins",
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
-                                                height: 1.15),),
-                                            ),
-                                            //                              
-                                            
-                                          ],
-                                    
-                                  ),
-                                )
                               
-                               ],
-                            ),
-                          
+                              ElevatedButton(
+                                onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) =>ItemDetails()),
+                                    );
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    
+                                     primary: Colors.white,
+                                     shadowColor: Colors. transparent,
+                                     padding: EdgeInsets.symmetric(
+                                       vertical: 0.0, horizontal: 0.0),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: new BorderRadius.circular(20.0),
+                                      ),
+                                    ), 
+                                child: Row(
+                                  children: [
+                                      Container(
+                                        child: Container(
+                                          width: 140,
+                                          height: 200,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(width: 1, color: Colors.grey.shade200),
+                                            borderRadius: BorderRadius.circular(20),
+                                            color: Colors.white,
+                                        
+                                        image: DecorationImage(
+                                          
+                                          image: AssetImage("${imgs[i]}"),
+                                          fit: BoxFit.cover,     
+                                          ),
+                                        ),
+                                        
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(top: 20),
+                                    width: 70,
+                                    height: 100,
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          child: Text("10%\n Discount",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                            fontFamily: "poppins",
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.bold,
+                                            height: 1.15),),
+                                        ),
+                                        //                              
+                                        
+                                      ],
+                                
+                                    ),
+                                  )
+                                
+                                 ],
+                                                          ),
                               ),
                             
                               Positioned(

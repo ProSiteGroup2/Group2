@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hardware_new/common/size.dart';
+import 'package:hardware_new/src/ui/item_details.dart';
 //import '../common/color.dart';
 
 
@@ -65,66 +66,93 @@ class _ImageCauserolState extends State<ImageCauserol> {
                                 ),
                               ],
                           ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 110,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  border: Border.all(width: 1, color: Colors.grey.shade200),
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage("${imgs[i]}"),
-                                    fit: BoxFit.cover,     
-                                    ),
-                                  ),
-                              ),
-                              Container(
-                                 margin: EdgeInsets.only(top: 20),
-                                 width: 100,
-                                height: 100,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      child: Text("Cement",
-                                    textAlign: TextAlign.right,
-                                    style: TextStyle(
-                                        fontFamily: "poppins",
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        height: 1.15),),
-                                    ),
-                                    Container(
-                                      width: 100,
-                                      margin: EdgeInsets.all(7),
-                                      padding: EdgeInsets.only(left:2.0,right: 2),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            width: 20,
-                                            child: Icon(Icons.location_on,size: 12.0,)),
-                                          Container(
-                                            width:60,
-                                            padding: EdgeInsets.only(left:3.0,right: 2),
-                                            child: Text(
-                                              "Perera Hardware, Maharagama",
-                                               style: TextStyle(
-                                                 fontSize: 8),
-                                                 maxLines:3,
-                                                 overflow: TextOverflow.ellipsis
-                                                 ,softWrap: false,
-                                                 ))
-                                        ],
-                                      ),
-                                    )
-
+                          child: ElevatedButton(
+                                
+                              onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) =>ItemDetails()),
+                                    );
+                                  },
+                                  style: ElevatedButton.styleFrom(
                                     
-                                  ],
-                                  
+                                     primary: Colors.white,
+                                     shadowColor: Colors. transparent,
+                                     padding: EdgeInsets.symmetric(
+                                       vertical: 0.0, horizontal: 0.0),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: new BorderRadius.circular(20.0),
+                                      ),
+                                    ), 
+                               
+                  
+
+                            child: Row(
+                              children: [
+                                Container(
+                                  //image
+                                  alignment: Alignment.centerLeft,
+                                  width: 110,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(width: 1, color: Colors.grey.shade200),
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage("${imgs[i]}"),
+                                      fit: BoxFit.cover,     
+                                      ),
+                                    ),
                                 ),
-                              )
-                            ],
+                                Container(
+                                  //details of a item
+                                   margin: EdgeInsets.only(top: 20),
+                                   width: 100,
+                                  height: 100,
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        child: Text("Cement",
+                                      textAlign: TextAlign.right,
+                                      style: TextStyle(
+                                          fontFamily: "poppins",
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          height: 1.15),),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.all(7),
+                                        padding: EdgeInsets.only(left:2.0,right: 2),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              width: 20,
+                                              child: Icon(Icons.location_on,size: 12.0,color: Colors.black,)),
+                                            Container(
+                                              width:60,
+                                              padding: EdgeInsets.only(left:3.0,right: 2),
+                                              child: Text(
+                                                "Perera Hardware, Maharagama",
+                                                 style: TextStyle(
+                                                   color: Colors.black,
+                                                   fontSize: 8),
+                                                   maxLines:3,
+                                                   overflow: TextOverflow.ellipsis
+                                                   ,softWrap: false,
+                                                   ))
+                                          ],
+                                        ),
+                                      )
+                          
+                                      
+                                    ],
+                                    
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         );
 

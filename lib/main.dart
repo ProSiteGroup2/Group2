@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hardware_new/components/navigation_bar.dart';
 import 'package:hardware_new/src/ui/home_screen.dart';
 
 // ignore: unused_import
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //  home: HomeScreen(),
-     home: ItemDetails(),
+     home: NavBar(),
     );
   }
 }
