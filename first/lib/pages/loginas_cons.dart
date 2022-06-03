@@ -1,18 +1,17 @@
-import 'package:first/main.dart';
-import 'package:first/pages/choose.dart';
+import 'package:first/pages/reguser.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class Loginas_cons extends StatefulWidget {
+  const Loginas_cons({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<Loginas_cons> createState() => _Loginas_consState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _Loginas_consState extends State<Loginas_cons> {
   @override
-  final sp_emailController = TextEditingController();
-  final sp_passwordController = TextEditingController();
+  final cons_emailController = TextEditingController();
+  final cons_passwordController = TextEditingController();
   late bool _passwordVisible;
   void initState() {
     _passwordVisible = false;
@@ -27,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/SP Login.png"),
+                  image: AssetImage("assets/User Login.png"),
                   fit: BoxFit.cover,
                   alignment: Alignment.center),
             ),
@@ -54,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
                       child: Text(
-                        "as Service Provider",
+                        "as Consumer",
                         style: TextStyle(
                             fontFamily: 'poppins',
                             fontSize: 25.0,
@@ -83,7 +82,6 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           // color: Colors.transparent,
                           child: TextFormField(
-                            controller: sp_emailController,
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -125,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: TextFormField(
                             keyboardType: TextInputType.text,
-                            controller: sp_passwordController,
+                            controller: cons_passwordController,
                             obscureText: !_passwordVisible,
                             style: TextStyle(
                               fontSize: 20,
@@ -213,7 +211,7 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Choose()),
+                                    builder: (context) => RegUser()),
                               );
                             },
                             child: Text(
@@ -242,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                 //           width: MediaQuery.of(context).size.width,
                 //           height: MediaQuery.of(context).size.height * 0.5,
                 //           child: Image.asset(
-                //             "assets/select_1.png",
+                //             "assets/user_pic.jpg",
                 //             fit: BoxFit.fitWidth,
                 //           ),
                 //         ),
