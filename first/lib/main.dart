@@ -2,7 +2,7 @@ import 'package:first/pages/choose.dart';
 import 'package:first/pages/loginas_cons.dart';
 import 'package:first/pages/loginpage.dart';
 import 'package:first/pages/starting.dart';
-import 'package:first/select.dart';
+import 'package:first/pages/select.dart';
 import 'package:flutter/material.dart';
 import 'package:first/pages/profession.dart';
 import 'package:flutter/rendering.dart';

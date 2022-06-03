@@ -1,4 +1,4 @@
-import 'package:first/select.dart';
+import 'package:first/pages/select.dart';
 import 'package:flutter/material.dart';
 
 class Starting extends StatelessWidget {
