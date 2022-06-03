@@ -61,6 +61,9 @@ flutter:
     - assets/imgs/cement.jpg
     - assets/imgs/cement.png
     - assets/imgs/logo.png
+    - assets/imgs/worker1.jpg
+    - assets/imgs/worker2.jpg
+    - assets/imgs/worker3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -74,11 +77,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: poppins
+    - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-Bold.ttf
-        - asset: assets/fonts/Poppins-Medium.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

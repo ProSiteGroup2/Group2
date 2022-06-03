@@ -74,7 +74,7 @@ class _CActivityState extends State<CActivity> {
                             child: Container(
                               height: 75,
                               width: 75,
-                              child: Image.asset('assets/pro1.jpg')),
+                              child: Image.asset('assets/imgs/pro1.jpg')),
                           ),),
                       ],
                     ),

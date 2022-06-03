@@ -145,7 +145,7 @@ Map<String, dynamic> data = {
                             child: Text(
                               "Find Your\nNeed",
                               style: TextStyle(
-                                  fontFamily: "poppins",
+                                  fontFamily: "Poppins",
                                   fontSize: 33,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 2,
@@ -158,7 +158,7 @@ Map<String, dynamic> data = {
                                     labelStyle: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
-                                        fontFamily: "poppins"),
+                                        fontFamily: "Poppins"),
                                     unselectedLabelColor: Colors.grey,
                                     isScrollable: true,
                                     indicatorSize: TabBarIndicatorSize.label,
@@ -213,7 +213,7 @@ Map<String, dynamic> data = {
                                                 hintText: 'Search Category...',
                                                 hintStyle: TextStyle(
                                                   
-                                                  fontFamily: 'poppins',
+                                                  fontFamily: 'Poppins',
                                                   color: Colors.grey,
                                                   fontSize: 16
                                                 ),
@@ -252,7 +252,7 @@ Map<String, dynamic> data = {
                                               "Categories",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
-                                                  fontFamily: "poppins",
+                                                  fontFamily: "Poppins",
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold,
                                                   height: 1.15),
@@ -488,7 +488,7 @@ Map<String, dynamic> data = {
                                               "Most Popular Items",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
-                                                  fontFamily: "poppins",
+                                                  fontFamily: "Poppins",
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold,
                                                   height: 1.15),
@@ -520,7 +520,7 @@ Map<String, dynamic> data = {
                                                   "This Week best offers",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
-                                                      fontFamily: "poppins",
+                                                      fontFamily: "Poppins",
                                                       fontSize: 14,
                                                       fontWeight: FontWeight.bold,
                                                       height: 1.15),
@@ -582,7 +582,7 @@ Map<String, dynamic> data = {
                                           hintText: 'Search Category...',
                                           hintStyle: TextStyle(
                                             
-                                            fontFamily: 'poppins',
+                                            fontFamily: 'Poppins',
                                             color: Colors.grey,
                                             fontSize: 16
                                           ),
@@ -620,7 +620,7 @@ Map<String, dynamic> data = {
                                                  "Contractors",
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
-                                                  fontFamily: "poppins",
+                                                  fontFamily: "Poppins",
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.bold,
                                                   height: 1.15),
@@ -632,7 +632,7 @@ Map<String, dynamic> data = {
                                                   "See all",
                                                   textAlign: TextAlign.right,
                                                   style: TextStyle(
-                                                      fontFamily: "poppins",
+                                                      fontFamily: "Poppins",
                                                       fontSize: 12,
                                                       fontWeight: FontWeight.bold,
                                                       color: Colors.grey,
@@ -664,7 +664,7 @@ Map<String, dynamic> data = {
                                                 "Masons",
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
-                                                    fontFamily: "poppins",
+                                                    fontFamily: "Poppins",
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
                                                     height: 1.15),
@@ -676,7 +676,7 @@ Map<String, dynamic> data = {
                                                 "See all",
                                                 textAlign: TextAlign.right,
                                                 style: TextStyle(
-                                                    fontFamily: "poppins",
+                                                    fontFamily: "Poppins",
                                                     fontSize: 12,
                                                     fontWeight: FontWeight.bold,
                                                     color: Colors.grey,
@@ -712,7 +712,7 @@ Map<String, dynamic> data = {
                                                 "Electricians",
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
-                                                    fontFamily: "poppins",
+                                                    fontFamily: "Poppins",
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
                                                     height: 1.15),
@@ -725,7 +725,7 @@ Map<String, dynamic> data = {
                                                   "See all",
                                                   textAlign: TextAlign.right,
                                                   style: TextStyle(
-                                                      fontFamily: "poppins",
+                                                      fontFamily: "Poppins",
                                                       fontSize: 12,
                                                       fontWeight: FontWeight.bold,
                                                       color: Colors.grey,
@@ -761,7 +761,7 @@ Map<String, dynamic> data = {
                                                   "Plumbers",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
-                                                      fontFamily: "poppins",
+                                                      fontFamily: "Poppins",
                                                       fontSize: 16,
                                                       fontWeight: FontWeight.bold,
                                                       height: 1.15),
@@ -773,7 +773,7 @@ Map<String, dynamic> data = {
                                               "See all",
                                               textAlign: TextAlign.right,
                                               style: TextStyle(
-                                                  fontFamily: "poppins",
+                                                  fontFamily: "Poppins",
                                                   fontSize: 12,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.grey,
