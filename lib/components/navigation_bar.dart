@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hardware_new/src/ui/customer_activities.dart';
 import 'package:hardware_new/src/ui/home_screen.dart';
 
 
@@ -13,7 +14,7 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int currindex=0;
   final screens=[
-    HomeScreen(),Text("hy"),Text("a"),Text('Profile')
+    HomeScreen(),CActivity(),Text("a"),Text('Profile')
   ];
   @override
   Widget build(BuildContext context) {
