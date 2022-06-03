@@ -1,7 +1,7 @@
-import 'package:hardware_new/common/constraints.dart';
-import 'package:hardware_new/common/size.dart';
-import 'package:hardware_new/common/color.dart';
-import 'package:hardware_new/common/style.dart';
+import 'package:hardware_new/Common/constraints.dart';
+import 'package:hardware_new/Common/size.dart';
+import 'package:hardware_new/Common/color.dart';
+import 'package:hardware_new/Common/style.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hardware_new/common/size.dart';
-import 'package:hardware_new/components/image_causerol.dart';
-import 'package:hardware_new/components/image_causerol_a.dart';
-import 'package:hardware_new/components/image_causerol_b.dart';
+import 'package:hardware_new/Common/size.dart';
+import 'package:hardware_new/Components/image_causerol.dart';
+import 'package:hardware_new/Components/image_causerol_a.dart';
 import 'package:hardware_new/src/ui/Steel.dart';
 import 'package:hardware_new/src/ui/Bricks.dart';
 import 'package:hardware_new/src/ui/Cement.dart';

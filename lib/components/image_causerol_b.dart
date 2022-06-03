@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hardware_new/common/size.dart';
+import 'package:hardware_new/Common/size.dart';
 //import '../common/color.dart';
 
 

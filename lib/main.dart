@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hardware_new/components/navigation_bar.dart';
+import 'package:hardware_new/Components/navigation_bar.dart';
 // ignore: unused_import
 import 'package:hardware_new/src/ui/home_screen.dart';
 
