@@ -246,13 +246,13 @@ Map<String, dynamic> data = {
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                           Container(
-                                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                            padding: EdgeInsets.symmetric(vertical: 11.0,horizontal: 25.0),
                                             child: Text(
                                               "Categories",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                   fontFamily: "Poppins",
-                                                  fontSize: 14,
+                                                  fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                   height: 1.15),
                                             ),
@@ -292,27 +292,66 @@ Map<String, dynamic> data = {
                                                                 offset: Offset(-10, -10), // changes position of shadow
                                                               ),
                                                             ],
+                                                           
                                                         ),
 
 
-                                                    child: ElevatedButton(
-                                                      onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(builder: (context) =>cement()),
-                                                          );
-                                                        },
-                                                        style: ElevatedButton.styleFrom(
-                                                          
-                                                          primary: Colors.white,
-                                                          shadowColor: Colors. transparent,
-                                                          padding: EdgeInsets.symmetric(
-                                                            vertical: 0.0, horizontal: 0.0),
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius: new BorderRadius.circular(20.0),
-                                                            ),
-                                                          ), child: null, 
-                                                    ),
+                                                    child: Stack(
+                                                      children: [
+                                                        
+                                                        Container(
+                                                        //cement
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        decoration: BoxDecoration(
+                                                           image: DecorationImage(
+                                                                image: AssetImage("assets/imgs/cement.jpg"),
+                                                                fit: BoxFit.cover,     
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(20.0)
+                                                        ),
+                                                    
+                                                        child: ElevatedButton(
+                                                          onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(builder: (context) =>cement()),
+                                                              );
+                                                            },
+                                                            
+                                                            style: ElevatedButton.styleFrom(
+                                                             
+                                                              primary: Colors.white12,
+                                                              shadowColor: Colors. transparent,
+                                                              padding: EdgeInsets.symmetric(
+                                                                vertical: 0.0, horizontal: 0.0),
+                                                                
+                                                                shape: RoundedRectangleBorder(
+                                                                  borderRadius: new BorderRadius.circular(20.0),
+                                                                  
+                                                                ),
+                                                              ), child: null, 
+                                                        ),
+                                                      ),
+                                                        Center(
+                                                         //text
+                                                         
+                                                          child: Container(
+                                                             color: Colors.black54,
+                                                             height: 30,
+                                                            
+                                                            //  padding: const EdgeInsets.all(10),
+                                                            child: Text("Cement",
+                                                              style: TextStyle(
+                                                                fontFamily: "Poppins",
+                                                                fontWeight: FontWeight.bold,
+                                                                fontSize: 25,
+                                                                color: Colors.white),),
+                                                          ),
+                                                        ),
+                                                         
+                                                      ],
+                                                      ),
                                                   ),
                                                   Container(
                                                     //Bricks
@@ -342,24 +381,59 @@ Map<String, dynamic> data = {
                                                         ),
 
 
-                                                    child: ElevatedButton(
-                                                      onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(builder: (context) =>bricks()),
-                                                          );
-                                                        },
-                                                        style: ElevatedButton.styleFrom(
-                                                          
-                                                          primary: Colors.white,
-                                                          shadowColor: Colors. transparent,
-                                                          padding: EdgeInsets.symmetric(
-                                                            vertical: 0.0, horizontal: 0.0),
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius: new BorderRadius.circular(20.0),
-                                                            ),
-                                                          ), child: null, 
-                                                    ),
+                                                    child: Stack(
+                                                      children: [
+                                                          Container(
+                                                        //bricks
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        decoration: BoxDecoration(
+                                                           image: DecorationImage(
+                                                                image: AssetImage("assets/imgs/bricks.jpg"),
+                                                                fit: BoxFit.cover,     
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(20.0)
+                                                        ),
+                                                        child: ElevatedButton(
+                                                          onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(builder: (context) =>bricks()),
+                                                              );
+                                                            },
+                                                            style: ElevatedButton.styleFrom(
+                                                              
+                                                              primary: Colors.white12,
+                                                              shadowColor: Colors. transparent,
+                                                              padding: EdgeInsets.symmetric(
+                                                                vertical: 0.0, horizontal: 0.0),
+                                                                shape: RoundedRectangleBorder(
+                                                                  borderRadius: new BorderRadius.circular(20.0),
+                                                                ),
+                                                              ), child: null, 
+                                                        ),
+                                                      ),
+                                                          Center(
+                                                         //text
+                                                         
+                                                          child: Container(
+                                                             color: Colors.black54,
+                                                             height: 30,
+                                                            
+                                                            //  padding: const EdgeInsets.all(10),
+                                                            child: Text("Bricks",
+                                                              style: TextStyle(
+                                                                fontFamily: "Poppins",
+                                                                fontWeight: FontWeight.bold,
+                                                                fontSize: 25,
+                                                                color: Colors.white),),
+                                                          ),
+                                                        ),
+                                                        
+                                                      
+                                                    
+                                                      ],
+                                                       ),
                                                   )
                                                 
                                                 ],
@@ -397,24 +471,57 @@ Map<String, dynamic> data = {
                                                         ),
 
 
-                                                    child: ElevatedButton(
-                                                      onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(builder: (context) =>steel()),
-                                                          );
-                                                        },
-                                                        style: ElevatedButton.styleFrom(
-                                                          
-                                                          primary: Colors.white,
-                                                          shadowColor: Colors. transparent,
-                                                          padding: EdgeInsets.symmetric(
-                                                            vertical: 0.0, horizontal: 0.0),
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius: new BorderRadius.circular(20.0),
-                                                            ),
-                                                          ), child: null, 
-                                                    ),
+                                                    child: Stack(
+                                                      children: [
+                                                          Container(
+                                                        //steel
+                                                        width: kPropWidth(context, 0.4),
+                                                        height: kPropHeight(context, 0.08),
+                                                        decoration: BoxDecoration(
+                                                           image: DecorationImage(
+                                                                image: AssetImage("assets/imgs/stee.jpg"),
+                                                                fit: BoxFit.cover,     
+                                                                ),
+                                                                borderRadius: BorderRadius.circular(20.0)
+                                                        ),
+                                                        child: ElevatedButton(
+                                                          onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(builder: (context) =>steel()),
+                                                              );
+                                                            },
+                                                            style: ElevatedButton.styleFrom(
+                                                              
+                                                              primary: Colors.white12,
+                                                              shadowColor: Colors. transparent,
+                                                              padding: EdgeInsets.symmetric(
+                                                                vertical: 0.0, horizontal: 0.0),
+                                                                shape: RoundedRectangleBorder(
+                                                                  borderRadius: new BorderRadius.circular(20.0),
+                                                                ),
+                                                              ), child: null, 
+                                                        ),
+                                                      ),
+                                                          Center(
+                                                         //text
+                                                         
+                                                          child: Container(
+                                                             color: Colors.black54,
+                                                             height: 30,
+                                                            
+                                                            //  padding: const EdgeInsets.all(10),
+                                                            child: Text("Steel",
+                                                              style: TextStyle(
+                                                                fontFamily: "Poppins",
+                                                                fontWeight: FontWeight.bold,
+                                                                fontSize: 25,
+                                                                color: Colors.white),),
+                                                          ),
+                                                        ),
+                                                        
+                                                      ],
+                                                       ),
                                                   ),
                                                   Container(
                                                     //sand
@@ -444,24 +551,56 @@ Map<String, dynamic> data = {
                                                         ),
 
 
-                                                    child: ElevatedButton(
-                                                      onPressed: () {
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(builder: (context) =>sand()),
-                                                          );
-                                                        },
-                                                        style: ElevatedButton.styleFrom(
-                                                          
-                                                          primary: Colors.white,
-                                                          shadowColor: Colors. transparent,
-                                                          padding: EdgeInsets.symmetric(
-                                                            vertical: 0.0, horizontal: 0.0),
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius: new BorderRadius.circular(20.0),
-                                                            ),
-                                                          ), child: null, 
-                                                    ),
+                                                    child: Stack(
+                                                      children: [
+                                                             Container(
+                                                                //sand
+                                                                 width: kPropWidth(context, 0.4),
+                                                                 height: kPropHeight(context, 0.08),
+                                                                decoration: BoxDecoration(
+                                                                  image: DecorationImage(
+                                                                        image: AssetImage("assets/imgs/sand.jpg"),
+                                                                        fit: BoxFit.cover,     
+                                                                        ),
+                                                                        borderRadius: BorderRadius.circular(20.0)
+                                                                ),
+                                                                child: ElevatedButton(
+                                                                  onPressed: () {
+                                                                      Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(builder: (context) =>sand()),
+                                                                      );
+                                                                    },
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      
+                                                                      primary: Colors.white10,
+                                                                      shadowColor: Colors. transparent,
+                                                                      padding: EdgeInsets.symmetric(
+                                                                        vertical: 0.0, horizontal: 0.0),
+                                                                        shape: RoundedRectangleBorder(
+                                                                          borderRadius: new BorderRadius.circular(20.0),
+                                                                        ),
+                                                                      ), child: null, 
+                                                                ),
+                                                      ),
+                                                              Center(
+                                                         //text
+                                                         
+                                                          child: Container(
+                                                             color: Colors.black54,
+                                                             height: 30,
+                                                            
+                                                            //  padding: const EdgeInsets.all(10),
+                                                            child: Text("Steel",
+                                                              style: TextStyle(
+                                                                fontFamily: "Poppins",
+                                                                fontWeight: FontWeight.bold,
+                                                                fontSize: 25,
+                                                                color: Colors.white),),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                      ),
                                                   )
                                                 
                                                 ],
@@ -482,13 +621,13 @@ Map<String, dynamic> data = {
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                           Container(
-                                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                            padding: EdgeInsets.symmetric(vertical: 11.0,horizontal: 25.0),
                                             child: Text(
                                               "Most Popular Items",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                   fontFamily: "Poppins",
-                                                  fontSize: 14,
+                                                  fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                   height: 1.15),
                                             ),
@@ -514,13 +653,13 @@ Map<String, dynamic> data = {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Container(
-                                              padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+                                              padding: EdgeInsets.symmetric(vertical: 11.0,horizontal: 25.0),
                                               child: Text(
                                                   "This Week best offers",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                       fontFamily: "Poppins",
-                                                      fontSize: 14,
+                                                      fontSize: 15,
                                                       fontWeight: FontWeight.bold,
                                                       height: 1.15),
                                                 ),
