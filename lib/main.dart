@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_profile/user_profileview.dart';
 import 'user_profile.dart';
 
 void main() {
@@ -10,10 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
+      /*theme: ThemeData(
         primarySwatch: Colors.grey,
-      ),
-      home: MyHomePage(),
+      ),*/
+      home: MyHomePage2(),
     );
   }
 }

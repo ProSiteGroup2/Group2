@@ -379,9 +379,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           Container(
                             margin: EdgeInsets.fromLTRB(100.0, 0.0, 60.0, 30.0),
                             child:ElevatedButton.icon(
-                              label: Icon(Icons.lock),
-                              icon: Text('Changed Password',style:TextStyle(color: Colors.white),),
+
+                              //label: Icon(Icons.lock),
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.grey[700],
+                                shape: new RoundedRectangleBorder(borderRadius: new BorderRadiusDirectional.circular(16.0))
+                              ),
                               onPressed: () {  },
+                              icon: Text('Changed Password',style:TextStyle(color: Colors.white),),
+                              label: Icon(Icons.lock),
                             ),
                           )
                         ],
