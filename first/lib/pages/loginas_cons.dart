@@ -1,4 +1,5 @@
 import 'package:first/pages/reguser.dart';
+import 'package:first/pages/resetpwd_1.dart';
 import 'package:flutter/material.dart';
 
 class Loginas_cons extends StatefulWidget {
@@ -9,6 +10,20 @@ class Loginas_cons extends StatefulWidget {
 }
 
 class _Loginas_consState extends State<Loginas_cons> {
+  final _formKey = GlobalKey<FormState>();
+
+  String _userEmail = '';
+  String _password = '';
+
+  void _trySubmitForm() {
+    final bool? isValid = _formKey.currentState?.validate();
+    if (isValid == true) {
+      debugPrint('Everything looks good!');
+      debugPrint(_userEmail);
+      debugPrint(_password);
+    }
+  }
+
   @override
   final cons_emailController = TextEditingController();
   final cons_passwordController = TextEditingController();
@@ -20,16 +35,17 @@ class _Loginas_consState extends State<Loginas_cons> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/User Login.png"),
-                  fit: BoxFit.cover,
-                  alignment: Alignment.center),
-            ),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/User Login.png"),
+                fit: BoxFit.cover,
+                alignment: Alignment.center),
+          ),
+          child: Form(
+            key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +63,6 @@ class _Loginas_consState extends State<Loginas_cons> {
                             fontSize: 40.0,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF5D5D5D)),
-                        //textAlign: TextAlign.right,
                       ),
                     ),
                     Padding(
@@ -59,7 +74,6 @@ class _Loginas_consState extends State<Loginas_cons> {
                             fontSize: 25.0,
                             fontWeight: FontWeight.w300,
                             color: Color(0xFF5D5D5D)),
-                        //textAlign: TextAlign.right,
                       ),
                     ),
                     Container(
@@ -103,6 +117,17 @@ class _Loginas_consState extends State<Loginas_cons> {
                               ),
                               labelText: 'Email Address',
                             ),
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
+                                return 'Please enter your email address';
+                              }
+
+                              if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                                return 'Please enter a valid email address';
+                              }
+                              return null;
+                            },
+                            onChanged: (value) => _userEmail = value,
                           ),
                         ),
                         Container(
@@ -157,6 +182,13 @@ class _Loginas_consState extends State<Loginas_cons> {
                               ),
                               labelText: 'Password',
                             ),
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
+                                return 'This field is required';
+                              }
+                              return null;
+                            },
+                            onChanged: (value) => _password = value,
                           ),
                         ),
                         Row(
@@ -165,7 +197,11 @@ class _Loginas_consState extends State<Loginas_cons> {
                           children: [
                             FlatButton(
                               onPressed: () {
-                                //TODO FORGOT PASSWORD SCREEN GOES HERE
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ResetPwd_1()),
+                                );
                               },
                               child: Text(
                                 'Forgot Password?',
@@ -183,7 +219,8 @@ class _Loginas_consState extends State<Loginas_cons> {
                     ),
                     Center(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        //onPressed: () {},
+                        onPressed: _trySubmitForm,
                         child: Text(
                           'Login',
                           style: TextStyle(
@@ -192,7 +229,7 @@ class _Loginas_consState extends State<Loginas_cons> {
                         ),
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
-                              vertical: 16.0, horizontal: 30.0),
+                              vertical: 16.0, horizontal: 60.0),
                           shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(25.0),
                           ),

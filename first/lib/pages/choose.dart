@@ -1,4 +1,7 @@
-import 'package:first/pages/profession.dart';
+import 'package:first/pages/regcont.dart';
+import 'package:first/pages/reghw.dart';
+import 'package:first/pages/reglab.dart';
+import 'package:first/pages/regtran.dart';
 import 'package:flutter/material.dart';
 
 class Choose extends StatefulWidget {
@@ -77,10 +80,10 @@ class _ChooseState extends State<Choose> {
                     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => Select()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegHw()),
+                        );
                       },
                       child: Text(
                         'Hardware Owner',
@@ -107,10 +110,10 @@ class _ChooseState extends State<Choose> {
                     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => Select()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegCont()),
+                        );
                       },
                       child: Text(
                         'Contractor',
@@ -139,7 +142,7 @@ class _ChooseState extends State<Choose> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Profession()),
+                          MaterialPageRoute(builder: (context) => RegLab()),
                         );
                       },
                       child: Text(
@@ -167,10 +170,10 @@ class _ChooseState extends State<Choose> {
                     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => Select()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegTran()),
+                        );
                       },
                       child: Text(
                         'Transportation',

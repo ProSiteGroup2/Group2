@@ -4,11 +4,10 @@ import 'package:first/pages/loginpage.dart';
 import 'package:first/pages/starting.dart';
 import 'package:first/pages/select.dart';
 import 'package:flutter/material.dart';
-import 'package:first/pages/profession.dart';
+
 import 'package:flutter/rendering.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:first/pages/starting.dart';
-//import 'package:first/pages/loginpage.dart';
+//import 'package:flutter_verification_code_input.dart';
 
 void main() {
   runApp(const MyApp());
