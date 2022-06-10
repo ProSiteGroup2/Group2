@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_profile/hardware_owanerprofile_setting.dart';
 import 'package:user_profile/user_profileview.dart';
 import 'user_profile.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       /*theme: ThemeData(
         primarySwatch: Colors.grey,
       ),*/
-      home: MyHomePage2(),
+      home: MyHomePage3(),
     );
   }
 }
