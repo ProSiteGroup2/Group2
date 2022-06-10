@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class MyHomePage2 extends StatefulWidget {
   const MyHomePage2({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class MyHomePage2 extends StatefulWidget {
 }
 
 class _MyHomePage2State extends State<MyHomePage2> {
+  double rating =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,17 +67,17 @@ class _MyHomePage2State extends State<MyHomePage2> {
 
                               Row(
                                 children: [
-                                  Expanded(flex:1 , child: Image.asset('assets/aaa.jpg')),
-                                  Expanded(flex:1, child:Image.asset('assets/bbb.jpg')),
-                                  Expanded(flex:1, child:Image.asset('assets/ccc.jpeg')),
+                                  Expanded(flex:1 , child: Image.asset('assets/aaa.jpg',height: 100.0,)),
+                                  Expanded(flex:1, child:Image.asset('assets/bbb.jpg',height: 100.0,)),
+                                  Expanded(flex:1, child:Image.asset('assets/ccc.jpeg',height: 100.0,)),
                                 ],
                               ),
                               SizedBox(height: 5.0),
                               Row(
                                 children: [
-                                  Expanded(flex:1 , child: Image.asset('assets/ddd.jpg')),
-                                  Expanded(flex:1, child:Image.asset('assets/eee.jpg')),
-                                  Expanded(flex:1, child:Image.asset('assets/ccc.jpeg')),
+                                  Expanded(flex:1 , child: Image.asset('assets/ddd.jpg',height: 80.0,)),
+                                  Expanded(flex:1, child:Image.asset('assets/eee.jpg',height: 80.0,)),
+                                  Expanded(flex:1, child:Image.asset('assets/ccc.jpeg',height: 80.0,)),
                                 ],
                               ),
                             ],
@@ -184,7 +186,32 @@ class _MyHomePage2State extends State<MyHomePage2> {
                           )
                           ),
 
+                        Center(
+                          child: Text(
+                            'Rate Him',
+                            style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),
+                          ),
+                        ),
 
+                        Center(
+                          child: RatingBar.builder(
+                            itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                            itemCount: 5,
+                            itemSize: 30,
+                            updateOnDrag: true,
+                            itemBuilder: (BuildContext context, _) {
+                              return Icon(Icons.star,color: Colors.amber,);
+                              },
+                            onRatingUpdate: (rating) {
+                              setState(() {
+                                this.rating =rating;
+                              });
+                            },
+
+                          ),
+                        ),
+
+                        SizedBox(height: 15.0,)
 
                       ],
                     ),
@@ -216,3 +243,5 @@ class _MyHomePage2State extends State<MyHomePage2> {
     );
   }
 }
+
+
